@@ -1,0 +1,13 @@
+name: EVDB-BETA
+title: EVDB-BETA
+username:
+account: advancement-mhc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 963531
+bundleId: 2128046
+url: https://advancement-mhc.shinyapps.io/EVDB-BETA/
+when: 1559598169.13762
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data(charge_ids).csv|get_charge_ids(c).R|Test.Rmd|Test_Markdown.Rmd|shiny_bookmarks/c65926e415cb8912/input.rds

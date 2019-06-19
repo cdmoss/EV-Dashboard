@@ -1,0 +1,56 @@
+---
+title: "Notes"
+author: "Chase"
+date: "5/29/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+I want to learn about the economy of the car.
+
+- What is the average economy accross the dataset?
+  - Average Economy = 21.22749 Kwh/100km
+
+- What is the average economy for each drive mode?
+  - E = 24.8
+  - E?+ = 18.9 
+  - N = 21.2
+  - N?E = 18.1
+
+- What about brake modes?
+  - 0 = 21.3
+  - B = 16.3
+  - D1 = 24.6
+  - D2 = 18.4
+  - D3 = 19.0
+  
+- Drivers
+  - 1 = 22.6
+  - 2 = 26.8
+  - 3 = 18.6
+  - 4 = 16.3
+  - 5 = na
+  - 6 = 15.7
+  - 7 = 13.7
+  - 8 = na
+  - 9 = 13.9
+  
+- Road Style
+  - City = 22.2
+  - City/Highway = 21.2
+  - Highway = 20.4
+
+- number of occupants
+  - 1 = 21.5
+  - 2 = 18.9
+  - 3 = 20.6
+  - 4 = 31.5
+  - strange, but probably due to skewed data
+
+How accurate is the economy report?
+- Sum the distance driven for each charge
+- divide the power used each charge by the distance sum
+
+Figure out how power used/min is affected

@@ -1,2 +1,3 @@
 # EV-Dashboard
-The new, improved and less cluttered EV-Dashboard
+
+This will eventually serve as a repo for the electric vehicle dashboard.

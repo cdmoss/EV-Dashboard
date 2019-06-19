@@ -1,0 +1,16 @@
+---
+title: "Changelog"
+author: "Chase"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 5/10/19
+
+- created new dataset
+- converted variables to proper data types
+  - date columns to "date"
+  - driver#, pre-trip and post-trip, lighting, road_conditions, departure columns, drive_mode, brake_mode, climate_control, road, reset_distance, charge_location to factor

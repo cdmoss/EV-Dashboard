@@ -1,0 +1,55 @@
+---
+title: "EV Project - Goals and Timeline"
+author: "Chase"
+date: "5/9/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+
+### Goals Milestones:
+- tidy data
+  - import data
+  - merge data
+  - clean data
+  
+- plan dashboard
+  - compile list of questions for data
+  - build scripts to answer those questions
+  - create ui outline
+  
+- build app
+  - import scripts into shiny app
+  - build ui
+  
+***
+
+### Project Timeline:
+
+#### Week 1 (May 1st - 3rd)
+- Orientation
+- Install Software
+  
+#### Week 2 (May 6th - 10th)
+- Build Timeline
+- Load data into R 
+- Merge and tidy data
+- Start visualizing data
+
+#### Week 3 (May 13th - 17th)
+- discover effective questions to ask the data
+- visualize and explore data using questions
+- create solid set of notes/observations about data
+
+#### Week 4 (May 20th - 24th)
+- build scripts that answer aforementioned questions effectively
+- learn Shiny
+- import scripts into shiny app
+
+#### Week 5 (May 27th - 31st)
+- build ui
+- polish app(?)

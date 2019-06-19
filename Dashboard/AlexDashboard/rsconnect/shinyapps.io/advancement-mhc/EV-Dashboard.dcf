@@ -1,0 +1,13 @@
+name: EV-Dashboard
+title: EV-Dashboard
+username:
+account: advancement-mhc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 933995
+bundleId: 2092013
+url: https://advancement-mhc.shinyapps.io/EV-Dashboard/
+when: 1558107417.30735
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: sandbox.R
