@@ -47,7 +47,6 @@ shinyServer(function(input, output, session) {
   
   
   output$mainChart <- renderPlotly({
-    Sys.sleep(1)
     plot_data = df() %>% 
       mutate(Notes = paste0("<b>Start Notes:</b> ", start_notes, "\n<b>Finish Notes:</b> ", finish_notes) %>% 
                str_remove_all("NA"),

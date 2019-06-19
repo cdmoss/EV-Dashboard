@@ -84,6 +84,7 @@ df = start %>%
     charge_departure = charge_departure %>% str_replace("N", "No"),
   ) %>% 
   filter(start_outside_temp < 50)
+  
 
 charge_ids = df %>% 
   select(trip_num, charge_date, charge_time) %>% 
@@ -101,14 +102,9 @@ dat = df %>%
                             charge_id)) %>% 
   select(-contains("datetime"))
 
-
-
 df %>% write_csv("Data/vehicle data/6-18-19/data.csv")
 df %>% write_csv("Dashboard/ChaseDashboard/data.csv")
-
-dat %>% write_csv("Data/vehicle data/6-18-19/data(charge_ids).csv")
-dat %>% write_csv("Dashboard/ChaseDashboard/data(charge_ids).csv")
-dat %>% write_csv("Dashboard/CD2/data.csv")
+df %>% write_csv("Dashboard/CD2/data.csv")
 
 
 

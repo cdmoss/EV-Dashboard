@@ -59,7 +59,7 @@ shinyUI(
         "Vertical variable:",
         selected = "range_start",
         choices = c(
-          `Range` = "range_start",
+          `Range at Start` = "range_start",
           `Energy Use (Kwh/100km)` = "economy",
           'Blue Score' = "blue_score",
           'Average Speed (km/h)' = "average_speed"
