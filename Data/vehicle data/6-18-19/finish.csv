@@ -217,7 +217,7 @@ Trip #,Post-trip,Outside temp ?C,Inside Temp ?C,Blue score,Distance Since start 
 216,Y,-24.5,5,81,17,54,:19,29.4,93,D1,Y,Highway,Y,Feels warmer than the indicated in the car
 217,Y,-23,3,98,4,24,:11,42.8,84,D1,Y,City ,Y,Feels warmer than the indicated in the car
 218,Y,-20,14,97,4,24,:12,43,86,D1,Y,City ,Y,Level 1 charger doesn't always fully charge overnight
-219,Y,-23.5,165,82,17,53,:19,32.3,59,D1,Y,Highway,Y,With it this cold the range of the car is diminished and a level 2 charger is almost neccesary
+219,Y,-23.5,16.5,82,17,53,:19,32.3,59,D1,Y,Highway,Y,With it this cold the range of the car is diminished and a level 2 charger is almost neccesary
 220,Y,-24,3,79,18,51,:21,30.9,73,D1,Y,Highway,Y,
 221,Y,-21.5,4,91,4,28,:09,45.7,72,D1,Y,City/Highway,Y,
 222,Y,-21.5,7.5,96,1,17,:05,54.9,62,D1,Y,City ,Y,
@@ -401,7 +401,7 @@ Trip #,Post-trip,Outside temp ?C,Inside Temp ?C,Blue score,Distance Since start 
 400,Y,-0.5,9.5,94,17,49,:21,15.6,199,0,N,Highway,Y,
 401,Y,0.5,5,76,0,11,:02,25.9,197,0,N,City ,Y,seawa
 402,Y,13.5,27.5,93,0,9,:05,14.5,196,0,N,City ,Y,
-403,Y,14,29.5,87,6,29,3:14,14.6,190,B,N,City/Highway,Y,
+403,Y,14,29.5,87,6,29,:14,14.6,190,B,N,City/Highway,Y,
 404,Y,13.5,30,76,12,64,:11,15.3,177,B,N,Highway,Y,
 405,Y,13,19.5,71,15,63,:14,12.8,214,B,Y,Highway,Y,
 406,Y,15.5,23.5,85,8,14,:36,15.5,204,B,N,City/Highway,Y,
@@ -418,7 +418,7 @@ Trip #,Post-trip,Outside temp ?C,Inside Temp ?C,Blue score,Distance Since start 
 417,Y,13.5,22,79,17,58,:18,14.6,177,B,N,Highway,Y,
 418,Y,1.5,11,82,17,49,:21,13.7,214,D1,N,Highway,Y,
 419,Y,12.5,29.5,95,4,21,:11,12.9,213,D1,N,City ,Y,
-420,Y,13.5,29.5,82,5,23,:14,8.9,214,0,N,City ,Y,
+420,Y,13.5,29.5,82,5, ,:14,8.9,214,0,N,City ,Y,
 421,Y,14,25.5,80,3,22,:08,22.2,206,0,Y,City ,Y,
 422,Y,13,32.5,93,7,32,:13,11.5,205,D1,N,City/Highway,Y,
 423,Y,8,15.5,93,6,30,:12,14.1,197,D1,N,City/Highway,Y,
@@ -465,7 +465,7 @@ Trip #,Post-trip,Outside temp ?C,Inside Temp ?C,Blue score,Distance Since start 
 464,Y,21,26,86,3,11,:19,14.3,201,0,N,City ,Y,
 465,Y,21,25.5,85,7,22,:21,13,187,0,Y,City ,Y,
 466,Y,14.5,23.5,79,8,16,:33,14.2,180,0,Y,City ,Y,
-467,Y,13.5,24,83,10,21,:378,13.2,173,0,Y,City ,Y,
+467,Y,13.5,24,83,10,21,:38,13.2,173,0,Y,City ,Y,
 468,Y,17,28,81,13,26,:31,12.5,166,0,Y,City/Highway,Y,
 469,Y,15,25,85,7,26,:17,12.7,192,0,Y,City ,,
 470,Y,11,20.5,84,7,30,:14,14,184,0,Y,City ,Y,

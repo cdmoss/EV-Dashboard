@@ -82,7 +82,9 @@ df = start %>%
     post_trip = post_trip %>% str_replace("N", "No"),
     charge_departure = charge_departure %>% str_replace("Y", "Yes"),
     charge_departure = charge_departure %>% str_replace("N", "No"),
-  ) %>% 
+    reset_meters = reset_meters %>% str_replace("Y", "Yes"),
+    reset_meters = reset_meters %>% str_replace("N", "No")
+  )
   #filter(start_outside_temp < 50)
   
 
@@ -93,7 +95,7 @@ charge_ids = df %>%
            lubridate::as_datetime(),
          charge_id = seq(1:nrow(.)))
 
-dat = df %>% 
+df = df %>% 
   mutate(trip_datetime = paste(trip_date, start_time) %>% 
            lubridate::as_datetime()) %>% 
   full_join(charge_ids) %>% 

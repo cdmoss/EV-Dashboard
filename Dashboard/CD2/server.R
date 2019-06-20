@@ -35,7 +35,7 @@ shinyServer(function(input, output, session) {
   
   # Load data
   df <- reactive({
-    dat <- read_rds("WeatherBound.rds")
+    dat <- read_csv("data.csv")
     #tyy <<- dat
     dat = dat[c(input$x, input$y, input$group, "start_notes", "finish_notes")]
     names(dat)[1] <- "x_var"
