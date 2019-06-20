@@ -83,7 +83,7 @@ df = start %>%
     charge_departure = charge_departure %>% str_replace("Y", "Yes"),
     charge_departure = charge_departure %>% str_replace("N", "No"),
   ) %>% 
-  filter(start_outside_temp < 50)
+  #filter(start_outside_temp < 50)
   
 
 charge_ids = df %>% 

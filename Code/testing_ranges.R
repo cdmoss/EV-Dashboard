@@ -10,3 +10,4 @@ df = df %>%
     trip_dist_err = trip_distance - odo_diff
   )
 
+a
