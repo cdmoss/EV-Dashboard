@@ -96,7 +96,7 @@ shinyUI(
       ),
       
       checkboxInput("facet_plot", "Split groups", value = F),
-      checkboxInput("trend", label = "Show trend", value = T),
+      #checkboxInput("trend", label = "Show trend", value = T),
       bookmarkButton(label = "Bookmark", icon = icon("bookmark"))
 
     ),

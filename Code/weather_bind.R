@@ -2,7 +2,7 @@ library(tidyverse)
 
 weather = read_rds("Data/WeatherData.rds")
 
-trips = read_csv("Data/vehicle data/5-27-19/data(charge_ids).csv") 
+trips = read_csv("Data/vehicle data/6-18-19/data.csv") 
 
 library(lubridate)
 
@@ -17,3 +17,4 @@ b = a %>% select(trip_date, start_time, date_time_local,
                                                           insidediff = temp_c - start_inside_temp)
 
 write_rds(a, "Data/WeatherBound.rds")
+write_rds(a, "Dashboard/CD2/WeatherBound.rds")

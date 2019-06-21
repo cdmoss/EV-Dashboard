@@ -9,3 +9,4 @@ df = ec_climate_data(location = 48949,
                 end = "2019-06-02")
 
 write_rds(df, "Data/WeatherData.rds")
+

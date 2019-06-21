@@ -45,10 +45,25 @@ shinyServer(function(input, output, session) {
     dat
   })
   
+  limiter = function(dataframe, x = "x_var", y = "y_var", 
+                     cor_lim = 0.7, rsq_lim = 0.5){
+    a = cor(dataframe[[y]], dataframe[[x]], use = "pairwise.complete.obs") 
+    b = a ** 2
+    #print(glue::glue("Cor: {a}"))
+    #print(glue::glue("RSQ: {b}"))
+    
+    dataframe$show_trend = ifelse(abs(a) > cor_lim && b > rsq_lim, 1, 0) %>% 
+      factor(c(1, 0))
+    
+    #print(dataframe)
+    return(dataframe)
+  }
+  
   
   output$mainChart <- renderPlotly({
     plot_data = df() %>% 
-      mutate(Notes = paste0("<b>Start Notes:</b> ", start_notes, "\n<b>Finish Notes:</b> ", finish_notes) %>% 
+      mutate(Notes = paste0("<b>Start Notes:</b> ", start_notes, 
+                            "\n<b>Finish Notes:</b> ", finish_notes) %>% 
                str_remove_all("NA"),
              Notes = ifelse(Notes == "<b>Start Notes:</b> \n<b>Finish Notes:</b> ", "", Notes),
              color_var = ifelse(Notes == "", "0", "1")
@@ -58,10 +73,14 @@ shinyServer(function(input, output, session) {
     
     if (input$facet_plot == T){
       p = plot_data %>%
+        group_by(group_var) %>% 
+        do(limiter(.)) %>% 
+        ungroup() %>%
         ggplot(aes(x = x_var, y = y_var, group = group_var)) + 
         facet_wrap(~group_var)
     } else {
       p = plot_data %>%
+          limiter() %>%
         ggplot(aes(x = x_var, y = y_var))
     }
     
@@ -71,19 +90,18 @@ shinyServer(function(input, output, session) {
       geom_point(aes(fill = group_var, 
                      shape = group_var, 
                      text = Notes),
-                 alpha = ifelse(input$trend == T, 0.4, 0.7), 
+                 alpha = 0.4, 
                  size = 4,
                  stroke = 0)
         
-    if (input$trend == T) {
-      p = p + 
-        geom_smooth(alpha = 0.25, color = NA) + 
-        geom_smooth(se = F, color = "#2196f3")
-    }
-
-    if(input$facet_plot == T){
-      p = p + facet_wrap(~group_var) 
-    }
+     #if (input$trend == T) {
+       p = p + 
+         #geom_smooth(method = "lm", alpha = 0.25, color = NA) + 
+         geom_smooth(method = "lm", show.legend = F, se = F, 
+                     aes(color = show_trend)) + 
+         scale_color_manual(values = c("#2196f3", NA), 
+                            labels = c("Significant Trend", "Insignificant Trend"))
+     #}
     
    p = p +
       ggtitle(label = 
@@ -93,11 +111,14 @@ shinyServer(function(input, output, session) {
             plot.title = element_text(size = 15, vjust = 20, hjust = 0), 
             axis.title = element_text(size = 10)
             ) + 
-      scale_fill_manual(values = c("#2196f3", "#771a39", "#358a93", "#1b1e47", "#bfaac1"))
+     scale_fill_manual(values = c("#2196f3", "#771a39", "#358a93", "#1b1e47", "#bfaac1"))
     
-    p %>% 
+    plotly_plot <- p %>% 
       ggplotly(tooltip = "text") %>% 
       config(displayModeBar = F)
+    
+    plotly_plot
+    
   })
   
 })
