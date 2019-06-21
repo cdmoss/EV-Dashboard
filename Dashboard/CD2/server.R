@@ -49,13 +49,13 @@ shinyServer(function(input, output, session) {
                      cor_lim = 0.7, rsq_lim = 0.5){
     a = cor(dataframe[[y]], dataframe[[x]], use = "pairwise.complete.obs") 
     b = a ** 2
-    #print(glue::glue("Cor: {a}"))
-    #print(glue::glue("RSQ: {b}"))
+    print(glue::glue("Cor: {a}"))
+    print(glue::glue("RSQ: {b}"))
     
     dataframe$show_trend = ifelse(abs(a) > cor_lim && b > rsq_lim, 1, 0) %>% 
       factor(c(1, 0))
     
-    #print(dataframe)
+    print(dataframe)
     return(dataframe)
   }
   
@@ -98,8 +98,9 @@ shinyServer(function(input, output, session) {
        p = p + 
          #geom_smooth(method = "lm", alpha = 0.25, color = NA) + 
          geom_smooth(method = "lm", show.legend = F, se = F, 
-                     aes(color = show_trend)) + 
+                     aes(color = ifelse(show_trend == 1, "1", NA_character_))) + 
          scale_color_manual(values = c("#2196f3", NA), 
+                            breaks = c(1, 0), 
                             labels = c("Significant Trend", "Insignificant Trend"))
      #}
     
