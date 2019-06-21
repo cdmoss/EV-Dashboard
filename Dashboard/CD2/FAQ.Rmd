@@ -1,6 +1,31 @@
 ##### What does drive mode (N, E, E+) and brake mode (0, D1, D2, D3, B) mean?
 
+##### How long does it take to charge on average?
+
+- 3 different charges
+
+##### What is the averge range of the vehicle?
+
+##### Is the e-golf easy to maintain?
+
+##### How fast is the e-golf?
+
+##### How many e-golf compatible chargers exist?
+
+##### What in the f*** is blue score?
+
+- We have no idea, go ask someone else
+
+##### What features does the e-golf have (i.e. departure, maybe a broad question, we could split it up and instead ask how each feature works?)?
+
 ##### 
+
+##### How much does an e-golf cost?
+
+##### How does temperature affect the performance of the vehicle (i.e. range, charge speed, etc.)?
+
+##### 
+
 
 ##### Does temperature make a difference?
 
