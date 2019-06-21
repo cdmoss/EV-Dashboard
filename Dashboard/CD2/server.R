@@ -114,9 +114,34 @@ shinyServer(function(input, output, session) {
             ) + 
      scale_fill_manual(values = c("#2196f3", "#771a39", "#358a93", "#1b1e47", "#bfaac1"))
     
-    plotly_plot <- p %>% 
+    ggplot_plot <<- p
+   
+    plotly_plot <<- p %>% 
       ggplotly(tooltip = "text") %>% 
       config(displayModeBar = F)
+    
+    # this gets me the length of how many objects the legend is created for
+    # i need to know where to stop my loop at
+    ll = plotly_plot$x$data %>% length
+    
+    # this gets the length of unique group_variables
+    # i need to know how many legends to 'skip' in my loop when i'm turning off legends
+    gvll = p$data$group_var %>% unique %>% length
+    
+    # this turns off the legend for 'geoms' added after the scatter points
+    # it begins at the start of everything outside of the group vars 'gvll'
+    # and it ends at the last index of the plotly object
+    for(i in (gvll + 1):ll){
+      plotly_plot$x$data[[i]]$showlegend = F
+    }
+    
+    # ggplotly when you've got multiple aesthetics really messes with the legend format
+    # this little loop goes through the plotly object and fixes the formatting
+    for(i in 1:gvll){
+      plotly_plot$x$data[[i]]$name = plotly_plot$x$data[[i]]$name %>% 
+        str_remove("\\(") %>% 
+        str_remove(",.*")
+    }
     
     plotly_plot
     
