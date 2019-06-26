@@ -1,21 +1,11 @@
 #### Welcome to Medicine Hat College's Volkswagen E-Golf Data Explorer!
 
-This tool is designed to present data collected from a 2018 Volkswagen E-Golf.
+The Explore tab lets you look at all the data we've collected:
 
-This page provides a crash course on how to navigate the **Explore** tab of the tool. The other tabs are self-explanatory.
+1. Use the controls in the grey box to choose the variables you want displayed on the graph.
 
-<br>
+3. Click the "Split Groups" checkbox to to create a graph for each group within the group variable selcted.
 
-##### Explore Tab
-
-1. Choose the variables to be displayed on the vertical and horizontal axis of the graph using the **Vertical Variable** and the **Horizontal Variable** drop-down bars on the left-hand side.
-
-2. Choose the variable you want to group the data points by using the **Group Variable** drop-down bar. this will color the data points based on the group they belong to.
-
-3. Click the different groups on the legend to hide or show data points from that particular group.
-
-3. Click the **Split Groups** checkbox to split the data into multiple graphs, with each graph showing data from a certain group from the grouping variable chosen.
-
-5. Click the **BOOKMARK** button to generate a url which contains the current state of the tool, a useful way to share observations with others.
+5. Click the "BOOKMARK" button to generate a url which contains the current state of the tool.
 
 
