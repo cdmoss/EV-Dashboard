@@ -32,7 +32,6 @@ shinyServer(function(input, output, session) {
     return(y)
   }
   
-  
   # Load data
   df <- reactive({
     dat <- read_csv("data.csv")
@@ -41,7 +40,6 @@ shinyServer(function(input, output, session) {
     names(dat)[1] <- "x_var"
     names(dat)[2] <- "y_var"
     names(dat)[3] <- "group_var"
-
     dat
   })
   
@@ -90,7 +88,7 @@ shinyServer(function(input, output, session) {
       geom_point(aes(fill = group_var, 
                      shape = group_var, 
                      text = Notes),
-                 alpha = 0.4, 
+                 alpha = 0.15, 
                  size = 4,
                  stroke = 0)
         

@@ -51,6 +51,10 @@ shinyUI(
                  windowTitle = "EVDB"),
       
       tabsetPanel(
+        tabPanel("Common Questions",
+                 icon = icon("book-reader"),
+                 includeMarkdown("FAQ.rmd")
+        ),
         tabPanel("Explore",
                  icon = icon("binoculars"),
                             sidebarLayout(
@@ -110,10 +114,7 @@ shinyUI(
                                 
         ),
         
-        tabPanel("Common Questions",
-                 icon = icon("book-reader"),
-                 includeMarkdown("FAQ.rmd")
-        ),
+
         
         tabPanel("Help",
                  icon = icon("question-circle"),
