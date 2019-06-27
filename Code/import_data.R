@@ -1,9 +1,9 @@
 library(tidyverse)
 library(lubridate)
 
-charge = read_csv("Data/vehicle data/6-18-19/charge.csv")
-start = read_csv("Data/vehicle data/6-18-19/start.csv")
-finish = read_csv("Data/vehicle data/6-18-19/finish.csv")
+charge = read_csv("Data/vehicle data/newest/charge.csv")
+start = read_csv("Data/vehicle data/newest/start.csv")
+finish = read_csv("Data/vehicle data/newest/finish.csv")
 
 charge = charge %>% 
   rename(
@@ -104,7 +104,7 @@ df = df %>%
                             charge_id)) %>% 
   select(-contains("datetime"))
 
-df %>% write_csv("Data/vehicle data/6-18-19/data.csv")
+df %>% write_csv("Data/vehicle data/newest/data.csv")
 df %>% write_csv("Dashboard/ChaseDashboard/data.csv")
 df %>% write_csv("Dashboard/CD2/data.csv")
 

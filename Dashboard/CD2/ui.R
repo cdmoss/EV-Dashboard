@@ -2,13 +2,14 @@ library(shiny)
 library(plotly)
 library(shinycustomloader)
 library(shinythemes)
+library(shinyjs)
 
 # Define UI for application
 shinyUI(
   # Important for saving states
   function(request){
     fluidPage(
-      
+      useShinyjs(),
       theme = shinytheme("paper"),
       
       tags$style(".selectize-input.focus {
@@ -53,6 +54,11 @@ shinyUI(
       tabsetPanel(
         tabPanel("Explore",
                  icon = icon("binoculars"),
+                 div(id = "Help",
+                    absolutePanel(
+                      includeMarkdown("Help.rmd")
+                    )
+                  ),
                             sidebarLayout(
                               sidebarPanel(
                                 width = 2,
@@ -104,8 +110,10 @@ shinyUI(
                                 plotlyOutput("mainChart",
                                               height = "700px",
                                               width = "100%"
-                                )
-                              )
+                                ),
+                                actionButton("showHelp", "Show Help"),
+                                actionButton("hideHelp", "Hide Help")
+                              ),
                             )
                                 
         ),
