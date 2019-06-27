@@ -1,33 +1,121 @@
-##### What does drive mode (N, E, E+) and brake mode (0, D1, D2, D3, B) mean?
+---
+output: html_document
+---
 
-##### What is blue score
+```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(knitr)
+df = read_csv("data.csv")
+```
 
-##### How long does an electric car battery last?
+### Questions {.tabset}
 
-##### How long does it take to charge on average?
-
-- 3 different chargers
-
-##### What is the averge range of the vehicle?
-
-##### Is the e-golf easy to maintain?
-
-##### How fast is the e-golf?
-
-##### Which chargers are compatible with the e-golf? How many are there?
-
-##### What features does the e-golf have (i.e. departure, maybe a broad question, we could split it up and instead ask how each feature works?)?
-
-##### How much electricity does the e-golf use?
-
-##### How much does it cost to charge the e-golf?
+#### Consumer {.tabset}
 
 ##### How much does an e-golf cost?
 
-##### How does temperature affect the performance of the vehicle (i.e. range, charge speed, etc.)?
+$35k
+
+##### How much does it cost to charge the e-golf?
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+x = 41.55/655
+
+df %>% 
+  mutate(cost = power_usage * x,
+         cost = scales::dollar(cost)) %>% 
+  filter(power_usage == max(power_usage, na.rm = T)) %>% 
+  select(cost, power_usage)
+```
+
+##### Is the e-golf easy to maintain?
+
+- No Oil Change.
+
+- Fewer moving part.
+
+##### What features does the e-golf have (i.e. departure, maybe a broad question, we could split it up and instead ask how each feature works?)?
+
 
 ##### What type of warranty does the e-golf have?
 
-##### What are the options for home charging stations and how much do they cost?
 
-##### 
+#### Charging {.tabset}
+
+##### How long does it take to charge on average?
+
+- Type 1 - 25hrs
+
+- Type 2 - 6hrs
+
+- Type 3 - 45mins
+
+The battery typically needs to be replaced after 10 years. 
+
+
+
+##### What are the options for home charging stations and how much do they cost?
+##### Which chargers are compatible with the e-golf? How many are there?
+
+##### How much electricity does the e-golf use? Cost per KMs
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+val = df %>% 
+  mutate(cost = economy * x,
+         cost = cost / 100) %>% 
+  summarise(CostPerKm = mean(cost, na.rm = T) %>% scales::dollar()) %>% 
+  pull(CostPerKm)
+```
+Average cost per Km is `r val`.
+
+#### Driving {.tabset}
+
+##### What is the averge range of the vehicle?
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+df %>% 
+  group_by(Temperature = cut(start_outside_temp, 5)) %>% 
+  summarise(`Max Range` = max(range_start, na.rm = T) %>% round(0)) %>% 
+  drop_na %>%
+  mutate(Temperature = Temperature %>% 
+           str_remove("\\(") %>% 
+           str_remove("\\]") %>% 
+           str_replace("\\,", " to "))
+```
+
+##### What does drive mode (N, E, E+) and brake mode (0, D1, D2, D3, B) mean?
+
+
+
+##### How fast is the e-golf?
+
+
+
+##### How does temperature affect the performance of the vehicle (i.e. range, charge speed, etc.)?
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+
+df %>% 
+  ggplot(aes(x = start_outside_temp, y = range_start)) + 
+  geom_point(alpha = 0.15) + 
+  geom_smooth(method = "lm", se = F) + 
+  theme_minimal() + 
+  theme(panel.grid = element_blank()) + 
+  labs(x = "Temperature", y = "Range")
+
+```
+
+According to our data (shown above), there is definately a postitive relationship between temperature and range. Boom!
+
+
+##### What is blue score?
+Blue score is......a.......
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+df %>% 
+  group_by(cut(average_speed, 5)) %>% 
+  summarise(mean = mean(blue_score, na.rm = T)) %>% kable()
+```
+
+
+

@@ -53,7 +53,9 @@ shinyUI(
       tabsetPanel(
         tabPanel("Common Questions",
                  icon = icon("book-reader"),
-                 includeMarkdown("FAQ.rmd")
+                 tags$iframe(src = 'FAQ.html', 
+                             width = '100%', height = '800px', 
+                             frameborder = 0, scrolling = 'auto')
         ),
         tabPanel("Explore",
                  icon = icon("binoculars"),
