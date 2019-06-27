@@ -52,6 +52,12 @@ shinyUI(
                  windowTitle = "EVDB"),
       
       tabsetPanel(
+        tabPanel("Common Questions",
+                 icon = icon("book-reader"),
+                 tags$iframe(src = 'FAQ.html', 
+                             width = '100%', height = '800px', 
+                             frameborder = 0, scrolling = 'auto')
+        ),
         tabPanel("Explore",
                  icon = icon("binoculars"),
                  div(id = "Help",
@@ -118,10 +124,7 @@ shinyUI(
                                 
         ),
         
-        tabPanel("Common Questions",
-                 icon = icon("book-reader"),
-                 includeMarkdown("FAQ.rmd")
-        ),
+
         
         tabPanel("Help",
                  icon = icon("question-circle"),
