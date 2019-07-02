@@ -1,5 +1,3 @@
-#### Welcome to Medicine Hat College's Volkswagen E-Golf Data Explorer!
-
 The Explore tab lets you look at all the data we've collected:
 
 1. Use the controls in the grey box to choose the variables you want displayed on the graph.

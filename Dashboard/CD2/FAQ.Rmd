@@ -5,6 +5,7 @@ output: html_document
 ```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
 library(knitr)
+library(kableExtra)
 df = read_csv("data.csv")
 ```
 
@@ -14,7 +15,7 @@ df = read_csv("data.csv")
 
 ##### How much does an e-golf cost?
 
-$35k
+A 2019 Volkswagen E-golf starts at $36,720.
 
 ##### How much does it cost to charge the e-golf?
 
@@ -25,20 +26,38 @@ df %>%
   mutate(cost = power_usage * x,
          cost = scales::dollar(cost)) %>% 
   filter(power_usage == max(power_usage, na.rm = T)) %>% 
-  select(cost, power_usage)
+  select(cost, power_usage) %>% 
+  kable()
 ```
 
-##### Is the e-golf easy to maintain?
+##### What maintenance do electric vehicles require?
 
-- No Oil Change.
-
-- Fewer moving part.
+-Battery
+-Brakes
+-Tires
 
 ##### What features does the e-golf have (i.e. departure, maybe a broad question, we could split it up and instead ask how each feature works?)?
 
 
 ##### What type of warranty does the e-golf have?
 
+Basic: 3 yrs/60,000 km
+Battery: 8 yrs/160,000 km
+Drive-Train: 5 yrs/100,000 km
+Corrosion: 12 yrs/unlimited km
+Roadside Assistance: 3 yrs/unlimited km 
+Maintenance 2 yrs/40,000 km
+
+##### What type of incentives come with owning an electric vehicle?
+
+As per the iZEV program, the Canadian Federal Government will award rebates for the following amounts (pertaining to the 2019 VW E-golf):
+
+ - \$5,000 for full purchase 
+ - \$1,250 for a 12-month lease 
+ - \$2,500 for a 24-month lease 
+ - \$3,750 for a 36-month lease 
+ 
+ ([list of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html)).
 
 #### Charging {.tabset}
 
@@ -83,9 +102,10 @@ df %>%
            str_replace("\\,", " to "))
 ```
 
-##### What does drive mode (N, E, E+) and brake mode (0, D1, D2, D3, B) mean?
+##### What is regenerative braking? How do the different brake modes (D, D1, D2, D3, B) effect the driving experience of the vehicle? 
 
-
+The e-golf, like all other electric vehicles, uses regenerative braking, a technology that slows the vehicle down using the electric motor instead of the breaks. As the vehicle is slowed down, the extra energy is fed back into the motor and charges the vehicle battery. The brake modes determine how the car will slow down when coasting
+##### What is drive mode?
 
 ##### How fast is the e-golf?
 

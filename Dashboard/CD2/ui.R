@@ -60,14 +60,9 @@ shinyUI(
         ),
         tabPanel("Explore",
                  icon = icon("binoculars"),
-                 div(id = "Help",
-                    absolutePanel(
-                      includeMarkdown("Help.rmd")
-                    )
-                  ),
-                            sidebarLayout(
+                 sidebarLayout(
                               sidebarPanel(
-                                width = 2,
+                                width = 3,
                                 shiny::selectInput(
                                   "y",
                                   "Vertical Variable:",
@@ -112,19 +107,14 @@ shinyUI(
                                 bookmarkButton(label = "Bookmark", icon = icon("bookmark"))
                               ),
                               
-                              mainPanel(width = 10,
+                              mainPanel(width = 9,
                                 plotlyOutput("mainChart",
                                               height = "700px",
                                               width = "100%"
-                                ),
-                                actionButton("showHelp", "Show Help"),
-                                actionButton("hideHelp", "Hide Help")
-                              ),
+                                )
+                              )
                             )
-                                
         ),
-        
-
         
         tabPanel("Help",
                  icon = icon("question-circle"),
