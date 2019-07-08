@@ -40,7 +40,6 @@ df %>%
 
 
 
-
 ##### What type of warranty does the e-golf have?
 
 Basic: 3 yrs/60,000 km
