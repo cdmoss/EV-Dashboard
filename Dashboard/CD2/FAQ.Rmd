@@ -11,7 +11,7 @@ df = read_csv("data.csv")
 
 ### Questions {.tabset}
 
-#### Consumer {.tabset}
+#### Consumer {.tabset .tabset-dropdown}
 
 ##### How much does an e-golf cost?
 
@@ -32,11 +32,13 @@ df %>%
 
 ##### What maintenance do electric vehicles require?
 
--Battery
--Brakes
--Tires
+- Battery
+- Brakes
+- Tires
 
 ##### What features does the e-golf have (i.e. departure, maybe a broad question, we could split it up and instead ask how each feature works?)?
+
+
 
 
 ##### What type of warranty does the e-golf have?
@@ -59,22 +61,26 @@ As per the iZEV program, the Canadian Federal Government will award rebates for 
  
  ([list of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html)).
 
-#### Charging {.tabset}
+#### Charging {.tabset .tabset-dropdown}
 
 ##### How long does it take to charge on average?
 
-- Type 1 - 25hrs
+There are typically 3 levels of charger:
 
-- Type 2 - 6hrs
+- Level 1 (120V): full charge takes 8 - 12hrs
 
-- Type 3 - 45mins
+- Level 2 (240V): full charge takes 4 - 6hrs
 
-The battery typically needs to be replaced after 10 years. 
-
-
+- Level 3 (480V): full charge takes 30min
 
 ##### What are the options for home charging stations and how much do they cost?
+
+The E-golf comes with a 120V level 1 charger that is compatible with a standard 
+
 ##### Which chargers are compatible with the e-golf? How many are there?
+
+J1772 - regular speed
+CCS - fast charging
 
 ##### How much electricity does the e-golf use? Cost per KMs
 
@@ -87,7 +93,7 @@ val = df %>%
 ```
 Average cost per Km is `r val`.
 
-#### Driving {.tabset}
+#### Driving {.tabset .tabset-dropdown}
 
 ##### What is the averge range of the vehicle?
 
@@ -104,12 +110,16 @@ df %>%
 
 ##### What is regenerative braking? How do the different brake modes (D, D1, D2, D3, B) effect the driving experience of the vehicle? 
 
-The e-golf, like all other electric vehicles, uses regenerative braking, a technology that slows the vehicle down using the electric motor instead of the breaks. As the vehicle is slowed down, the extra energy is fed back into the motor and charges the vehicle battery. The brake modes determine how the car will slow down when coasting
-##### What is drive mode?
+The e-golf, like all other electric vehicles, uses regenerative braking, a technology that slows the vehicle down using the electric motor instead of the breaks. As the vehicle is slowed down, the extra energy is fed back into the motor and charges the vehicle battery. The brake modes determine how the car will slow down when coasting.
+
+##### How do the different drive modes effect the driving experience of the vehicle?
+
+
 
 ##### How fast is the e-golf?
 
-
+df %>% 
+  
 
 ##### How does temperature affect the performance of the vehicle (i.e. range, charge speed, etc.)?
 
