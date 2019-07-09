@@ -29,8 +29,12 @@ df %>%
          cost = scales::dollar(cost)) %>% 
   filter(power_usage == max(power_usage, na.rm = T)) %>% 
   select(cost, power_usage) %>% 
-  kable() %>% kable_styling()
+  kable()
 ```
+<br>
+The Medicine Hat 2018 Utility rate was $41.55/655kWh.
+
+Using this rate, the cost of charging from home is \$0.06/kWh, or \$2.15 for a full charge
 
 ##### What maintenance do electric vehicles require?
 
@@ -86,6 +90,9 @@ CCS - fast charging
 ##### How much electricity does the e-golf use? Cost per KMs
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
+
+x = 41.55/655
+
 val = df %>% 
   mutate(cost = economy * x,
          cost = cost / 100) %>% 
@@ -122,6 +129,8 @@ Time to accelerate from 0 - 100 km/h: 9.6 seconds
 Instantaneous torque: 214 lb-ft (270 Nm)
 
 ##### How do the different drive modes effect the driving experience of the vehicle?
+
+Normal:
 
 Eco: Reduces fuel and air condtioning power consumption to increase range. Top speed is reduced to 115 km/h
 
