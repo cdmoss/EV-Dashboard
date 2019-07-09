@@ -46,7 +46,6 @@ shinyUI(
               font-weight: bold;, 
               font-size: large}"),
       
-      
       titlePanel(HTML("<font color = '#2196f3'>Volkswagen</font>
                   <b>E-Golf</b> Data Explorer"), 
                  windowTitle = "EVDB"),
@@ -104,7 +103,7 @@ shinyUI(
                                 ),
                                 
                                 checkboxInput("facet_plot", "Split Groups", value = F),
-                                bookmarkButton(label = "Bookmark", icon = icon("bookmark"))
+                                bookmarkButton(label = "Save", icon = icon("bookmark"))
                               ),
                               
                               mainPanel(width = 9,

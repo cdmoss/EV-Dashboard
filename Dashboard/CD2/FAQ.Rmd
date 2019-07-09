@@ -1,5 +1,7 @@
 ---
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -11,7 +13,7 @@ df = read_csv("data.csv")
 
 ### Questions {.tabset}
 
-#### Consumer {.tabset .tabset-dropdown}
+#### Consumer {.tabset .tabset-fade .tabset-dropdown}
 
 ##### How much does an e-golf cost?
 
@@ -27,27 +29,27 @@ df %>%
          cost = scales::dollar(cost)) %>% 
   filter(power_usage == max(power_usage, na.rm = T)) %>% 
   select(cost, power_usage) %>% 
-  kable()
+  kable() %>% kable_styling()
 ```
 
 ##### What maintenance do electric vehicles require?
 
-- Battery
-- Brakes
-- Tires
+Electric vehicles don't require oil changes, fuel filter replacements, spark plug replacements or emission checks
 
-##### What features does the e-golf have (i.e. departure, maybe a broad question, we could split it up and instead ask how each feature works?)?
+##### What notable features does the e-golf have?
 
+The e-golf has a list of great features:
 
+- 
 
 ##### What type of warranty does the e-golf have?
 
-Basic: 3 yrs/60,000 km
-Battery: 8 yrs/160,000 km
-Drive-Train: 5 yrs/100,000 km
-Corrosion: 12 yrs/unlimited km
-Roadside Assistance: 3 yrs/unlimited km 
-Maintenance 2 yrs/40,000 km
+- Basic: 3 yrs/60,000 km
+- Battery: 8 yrs/160,000 km
+- Drive-Train: 5 yrs/100,000 km
+- Corrosion: 12 yrs/unlimited km
+- Roadside Assistance: 3 yrs/unlimited km 
+- Maintenance 2 yrs/40,000 km
 
 ##### What type of incentives come with owning an electric vehicle?
 
@@ -60,7 +62,7 @@ As per the iZEV program, the Canadian Federal Government will award rebates for 
  
  ([list of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html)).
 
-#### Charging {.tabset .tabset-dropdown}
+#### Charging {.tabset .tabset-fade .tabset-dropdown}
 
 ##### How long does it take to charge on average?
 
@@ -92,7 +94,7 @@ val = df %>%
 ```
 Average cost per Km is `r val`.
 
-#### Driving {.tabset .tabset-dropdown}
+#### Driving {.tabset .tabset-fade .tabset-dropdown}
 
 ##### What is the averge range of the vehicle?
 
@@ -111,14 +113,19 @@ df %>%
 
 The e-golf, like all other electric vehicles, uses regenerative braking, a technology that slows the vehicle down using the electric motor instead of the breaks. As the vehicle is slowed down, the extra energy is fed back into the motor and charges the vehicle battery. The brake modes determine how the car will slow down when coasting.
 
-##### How do the different drive modes effect the driving experience of the vehicle?
-
-
-
 ##### How fast is the e-golf?
 
-df %>% 
-  
+Top speed: 150 km/h.
+
+Time to accelerate from 0 - 100 km/h: 9.6 seconds
+
+Instantaneous torque: 214 lb-ft (270 Nm)
+
+##### How do the different drive modes effect the driving experience of the vehicle?
+
+Eco: Reduces fuel and air condtioning power consumption to increase range. Top speed is reduced to 115 km/h
+
+Eco-Plus: Reduces fuel and air conditioning power consumption further than eco mode to maximize range. Top speed is reduced to 90 km/h
 
 ##### How does temperature affect the performance of the vehicle (i.e. range, charge speed, etc.)?
 
@@ -134,11 +141,10 @@ df %>%
 
 ```
 
-According to our data (shown above), there is definately a postitive relationship between temperature and range. Boom!
-
+According to our data (shown above), the predicted range of the e-golf increases as temperature increases.
 
 ##### What is blue score?
-Blue score is......a.......
+Blue score is a feature that claims to train the owner to drive in a manner that improves economy and vehicle longevity.
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 df %>% 

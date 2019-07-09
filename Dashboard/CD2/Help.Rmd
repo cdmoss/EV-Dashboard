@@ -1,9 +1,24 @@
+The Questions tab gives answers to a variety of common questions related to the e-golf and electric vehicles in general:
+
+1. Navigate the question categories by clicking one of the three category tabs.
+
+2. From the dropdown bar, choose which question you want to see the answer to.
+
+***
+
 The Explore tab lets you look at all the data we've collected:
 
 1. Use the controls in the grey box to choose the variables you want displayed on the graph.
 
-3. Click the "Split Groups" checkbox to to create a graph for each group within the group variable selcted.
+3. Click the "Split Groups" checkbox to to create a graph for each group within the group variable selected.
 
-5. Click the "BOOKMARK" button to generate a url which contains the current state of the tool.
+5. Click the "SAVE" button to create a link that contains the current state of the graph.
+
+6. Click the the group names in the legend to show or hide the data from that group.
+
+7. Hover over data points to display any additional notes that were recorded for that trip.
+
+7. Using the mouse, draw a box using click and drag to zoom in on an area of the chart. Double clicking inside the chart will return to default view.
+
 
 
