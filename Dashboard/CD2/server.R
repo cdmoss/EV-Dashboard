@@ -75,7 +75,7 @@ shinyServer(function(input, output, session) {
         do(limiter(.)) %>% 
         ungroup() %>%
         ggplot(aes(x = x_var, y = y_var, group = group_var)) + 
-        facet_wrap(~group_var, scales = "free")
+        facet_wrap(~group_var, scales = "free", ncol = 1)
     } else {
       p = plot_data %>%
           limiter() %>%
