@@ -21,12 +21,11 @@ A 2019 Volkswagen E-golf starts at $36,720.
 
 ##### How much does it cost to charge the e-golf?
 
-<br>
 The Medicine Hat 2018 Utility rate was $41.55/655kWh.
 
 Using this rate, the cost of charging from home is \$0.06/kWh, or \$2.15 for a full charge.
 
-Public charging stations are often free, but sometimes charge a flat rate or cost per kWh that is comparable to the cost of charging at home.
+Public charging stations are often free, but some charge a flat rate or cost per kWh that is comparable to the cost of charging at home.
 
 ##### What maintenance do electric vehicles require?
 
@@ -70,7 +69,7 @@ There are 3 levels of charger:
 
 The E-golf comes with a charger that is capable of level 2 charging from a 240V outlet.
 
-Aftermarket charging stations from companies like Flo or ChargePoint are also available, which offer features such as faster charging than wall outlet, longer charging cord, warranty and smartphone compatibility.
+Aftermarket charging stations from companies like Flo or ChargePoint are also available, which offer features such as faster charging than a wall outlet alone, longer charging cord, warranty and smartphone compatibility.
 
 ##### Which chargers are compatible with the e-golf?
 
@@ -125,7 +124,7 @@ Instantaneous torque: 214 lb-ft (270 Nm)
 
 ##### What are the drive modes?
 
-The drive modes change the way consumes power:
+The drive modes change the way the e-golf consumes power:
 
 Normal: Uses normal drivetrain and air conditioning power consumption.
 
