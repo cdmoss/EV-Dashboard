@@ -85,7 +85,7 @@ shinyUI(
                                     "Inside Temperature at End" = "finish_inside_temp",
                                     "Average Speed" = "average_speed",
                                     "Energy use (Kwh/100km)" = "economy",
-                                    "Humidity" = "rel_hum",
+                                    #"Humidity" = "rel_hum",
                                     "Trip Duration" = "trip_duration",
                                     "Range Remaining" = "range_remaining"
                                   )
@@ -117,7 +117,7 @@ shinyUI(
         
         tabPanel("Help",
                  icon = icon("question-circle"),
-                 includeMarkdown("Help.rmd")
+                 includeMarkdown("Help.Rmd")
         )
       )
     )}
