@@ -11,7 +11,7 @@ library(kableExtra)
 df = read_csv("data.csv")
 ```
 
-### Questions {.tabset}
+### {.tabset}
 
 #### Consumer {.tabset .tabset-fade .tabset-dropdown}
 
