@@ -1,0 +1,24 @@
+talk to dealership about price of vehicle
+
+confirm warranty, price and shipped charger type and incentive w/ dealership
+
+use data for charging time
+
+talk to steve about utility rates
+
+include utility rate on cost per km question
+
+dig in to range vs temp
+
+owners manual for brake modes, blue score, drive modes
+
+give sources for info
+
+under driving
+
+add driver feedback section
+
+make the manual more comprehensive
+	- explain the limiter function better
+
+create instruction set for continued use by tracy and merl
