@@ -1,24 +1,41 @@
-talk to dealership about price of vehicle
+determine cost of ownership
+- car payments (talk to vw)
+- insurance
+- minus incentive
 
 confirm warranty, price and shipped charger type and incentive w/ dealership
 
+
 use data for charging time
+- Unable to use data for charging time because we only have the time the charge started
 
 talk to steve about utility rates
+- What value should we use for our cost to charge from home calculation? right now we are using the 2018 utility rate
+- steves bill was 12.8 cents, want to compare it with our bill
+
 
 include utility rate on cost per km question
+- 
 
 dig in to range vs temp
+- 
 
 owners manual for brake modes, blue score, drive modes
-
+- 
 give sources for info
 
 under driving
 
+
 add driver feedback section
+-added, needs to be reviewed
+
 
 make the manual more comprehensive
-	- explain the limiter function better
+- explain the limiter function better
 
 create instruction set for continued use by tracy and merl
+  
+Variables to add
+Date
+distance

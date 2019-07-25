@@ -19,14 +19,15 @@ df = read_csv("data.csv")
 
 A 2019 Volkswagen E-golf starts at $36,720.
 
+(need to consult vw)
+
 ##### How much does it cost to charge the e-golf?
 
-The Medicine Hat 2018 Utility rate was $41.55/655kWh.
-
-Using this rate, the cost of charging from home is \$0.06/kWh, or \$2.15 for a full charge.
+Using a rate of 12.8 cents/kWh, the cost of charging from home is \$0.06/kWh, or \$2.15 for a full charge.
 
 Public charging stations are often free, but some charge a flat rate or cost per kWh that is comparable to the cost of charging at home.
 
+(Electricity cost taken from a mean of x respondents of a utility rate survey)
 ##### What maintenance do electric vehicles require?
 
 Electric vehicles don't require oil changes, fuel filter replacements, spark plug replacements or emission checks, but still will require regular maintenance of the brakes, tires, coolant and of course the battery.
@@ -35,12 +36,7 @@ Electric vehicles don't require oil changes, fuel filter replacements, spark plu
 
 The warranty for the e-golf is as follows:
 
-- Basic: 3 years or 60,000 km
-- Battery: 8 years or 160,000 km
-- Drive-Train: 5 yrs or 100,000 km
-- Corrosion: 12 yrs or unlimited km
-- Roadside Assistance: 3 yrs or unlimited km 
-- Maintenance: 2 years or 40,000 km
+- The e-golf includes limited warranty 
 
 ##### What type of incentives come with owning an electric vehicle?
 
@@ -67,7 +63,9 @@ There are 3 levels of charger:
 
 ##### What are the options for home charging stations and how much do they cost?
 
-The E-golf comes with a charger that is capable of level 2 charging from a 240V outlet.
+The E-golf comes with a charger that is capable of level 1 charging from a 110V outlet.
+
+(source: owner's manual)
 
 Aftermarket charging stations from companies like Flo or ChargePoint are also available, which offer features such as faster charging than a wall outlet alone, longer charging cord, warranty and smartphone compatibility.
 
@@ -122,15 +120,21 @@ Time to accelerate from 0 - 100 km/h: 9.6 seconds
 
 Instantaneous torque: 214 lb-ft (270 Nm)
 
+Source: https://ev-database.org/car/1087/Volkswagen-e-Golf
+
 ##### What are the drive modes?
 
 The drive modes change the way the e-golf consumes power:
 
-Normal: Uses normal drivetrain and air conditioning power consumption.
+Normal: Uses normal drivetrain and air conditioning power consumption. The full power of the electric motor is available. Maximum speed is reduced to 140km/h.
 
-Eco: Reduces drivetrain and air condtioning power consumption to increase range. Top speed is reduced to 115 km/h.
+Eco: Energy consumption is reduced compared to the Normal driving mode. The power of the electric motor is reduced compared to the normal driving mode. Climatronic<sup>1</sup> heating and cooling is optimized for consumption. Maximum speed is reduced to 120km/h.
 
-Eco-Plus: Reduces fuel and air conditioning power consumption further than eco mode to maximize range. Top speed is reduced to 90 km/h.
+Eco-Plus: The power of the electric motor is reduced beyond that of Eco mode. Climatronic<sup>1</sup> heating and cooling is disabled, but defrost and ventilation are still available. Maximum speed is reduced to 95 km/h.
+
+Source: Owners Manual
+
+1. Climatronic refers to the vehicle's automatic climate control function, which allows the internal temperature to be set at a certain degree value.
 
 ##### How does temperature affect the range of the e-golf?
 
@@ -148,8 +152,20 @@ df %>%
 
 According to our data (shown above), the predicted range of the e-golf increases as temperature increases.
 
-##### What is blue score?
+##### What is blue score and the Think Blue Trainer?
 
-Blue score is a feature that claims to train the owner to drive in a manner that improves economy and vehicle longevity.
+The Think Blue trainer analyzes your driving and utilizes a visual display to help you adopt a more energy efficient driving style. Blue score is the metric used to rate your driving style efficiency.
 
+Source: Owners Manual
 
+#### Driver Feedback {.tabset .tabset-fade .tabset-dropdown}
+
+##### How does the car feel to drive?
+
+##### Did you ever feel range anxiety when driving the e-golf
+
+##### Would you ever buy an electric car? Why?
+
+##### What was your favorite part about driving the e-golf?
+
+##### 

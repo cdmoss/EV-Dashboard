@@ -141,7 +141,7 @@ shinyServer(function(input, output, session) {
         str_remove(",.*")
     }
     
-    plotly_plot
+    plot_gg(plotly_plot)
     
   })
   
