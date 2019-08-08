@@ -7,10 +7,18 @@ Citations
 	- 
 
 - vw dealer:
-	- price
-	- warranty
-	- insurance
-	- incentives
+	- price: MSRP - 43,020
+		 federeal ac tax: 100 
+		 amvick fee: 6.25
+		 tire tax: 20.00 or 4 per tire
+		 administriationfee: 599
+	- financing: no subvented interest rates for e-golf: 5.49%
+	- insurance: call insurance companie
+	- incentives: federal rebate 5000
+			(bc, ontario, quebec
+	- new electric home in medicine hat would like to take a photo of the egolf in september 
+
+
 	- 
 
 - 

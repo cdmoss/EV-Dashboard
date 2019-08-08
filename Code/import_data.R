@@ -5,6 +5,8 @@ charge = read_csv("Data/vehicle data/newest/charge.csv")
 start = read_csv("Data/vehicle data/newest/start.csv")
 finish = read_csv("Data/vehicle data/newest/finish.csv")
 
+chargetimes = read_csv("Data/vehicle data/newest/flo_charge.csv")
+
 charge = charge %>% 
   rename(
   "charge_location" = "Charge Location",
@@ -103,6 +105,9 @@ df = df %>%
                             zoo::na.locf(charge_id, fromLast = T), 
                             charge_id)) %>% 
   select(-contains("datetime"))
+
+df = df %>% 
+  mutate(total_dist_btwn_charge = )
 
 df %>% write_csv("Data/vehicle data/newest/data.csv")
 df %>% write_csv("Dashboard/ChaseDashboard/data.csv")

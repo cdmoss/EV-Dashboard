@@ -1,0 +1,58 @@
+---
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+## EV Data collection instructions
+
+### Getting Started and Finishing
+
+- Trip Start: The computer should be plugged in to the chords for data and charger and then the program launched. Collect the data with ignition off except for the range indicator data.
+
+-  Trip finish: This data is all collected with the ignition still on. The computer should be shut down & unplugged last (the computer screen will go to sleep and may need to be woke to collect temp data) The computer will need to be off and charged in a wall outlet
+
+### Driving Trip Start
+
+- Driver #: (1 - Merl) (2 - Mark) ( 3 - Steve) (4 - Tracy) (5 - Lee) (6 - Morgan) (7 - Alex) (8 - Allison) (9 - Derek) (10 - Chase) (11 - Zach) (12 - Darrell)
+
+- Pre-trip - a walk around and check it was done (video if nec and send with file name to mmayer@mhc.ab.ca)
+
+- Lighting options to use- Dim= dusk or dawn or mainly cloud (very little visible sun).  Dark= dark.  Sunny= mainly sunny (can be cloudy but bright).
+
+- Temperatures- incar display for outside collected before key is on when drivers door is closed. Inside is collected off surface data (please round to closest .5)
+
+- Road conditions- Clear= mainly clear.  Blizzard= blizzard.  Snowy= mainly snow covered.  Frosty= frosty. Partly covered = partly snow, hard pack or icy 
+
+- Range indicator and odometer - displayed on dash (odometer is displayed with ignition off)
+
+- Departure - You can set this so the car will be warm and ready when you leave (can be used off car battery or when plugged in) Driver 1 Set for only plugged in (this can only be accesed with ignition on)
+
+- Driving modes - selected on the left side of the shifter plate - Settings can be: Normal, Eco and Eco+ 
+
+- Notes: please feel free to leave any notes, feelings or whatever
+
+### Driving Trip Finish
+
+- Post-trip - a walk around and check it was done (video if nec and send with file name to mmayer@mhc.ab.ca)
+
+- Temperatures- incar display for outside collected before key is on when drivers door is closed. Inside is collected off surface data (please round to closest .5)
+
+- Blue Score also displayed on center infotainment screen
+
+- Brake Mode is done with shifter movement 0= Pulled into drive D1,D2,D3= pull shifter to the side left or right to toggle between them B=pull shifter back
+
+- Climate control used either Yes or No
+
+- Road conditions:
+  - City: Most speed limits observed under 70km/hr
+  - Highway - Most speed limits observed over 70Km/hr
+  - Combine if trip is fairly evenly mixed
+  
+- Notes: please indicate if you plug in here and feel free to leave any notes, feelings or whatever 
+
+### Charging
+
+- Location: type of charger and where it was plugged in (the cord with the car is a type 1) Provide details in notes on location etc.
+
+- Charge: When the car is plugged in, the estimated time left until charge is done will display on the dash, please record that time
