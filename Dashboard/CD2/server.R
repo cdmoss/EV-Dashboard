@@ -44,13 +44,13 @@ shinyServer(function(input, output, session) {
   })
   
   limiter = function(dataframe, x = "x_var", y = "y_var", 
-                     cor_lim = 0.7, rsq_lim = 0.5){
+                     cor_lim = 0.5){
     a = cor(dataframe[[y]], dataframe[[x]], use = "pairwise.complete.obs") 
-    b = a ** 2
+    #b = a ** 2
     print(glue::glue("Cor: {a}"))
-    print(glue::glue("RSQ: {b}"))
+    #print(glue::glue("RSQ: {b}"))
     
-    dataframe$show_trend = ifelse(abs(a) > cor_lim && b > rsq_lim, 1, 0) %>% 
+    dataframe$show_trend = ifelse(abs(a) > cor_lim, 1, 0) %>% 
       factor(c(1, 0))
     
     print(dataframe)

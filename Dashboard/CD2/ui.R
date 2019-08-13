@@ -103,7 +103,13 @@ shinyUI(
                                 ),
                                 
                                 checkboxInput("facet_plot", "Split Groups", value = F),
+                                
+                                helpText("Note: A blue line of best fit will appear on
+                                         the chart when the relationship between the two 
+                                         chosen variables is strong enough."),
+                                
                                 bookmarkButton(label = "Save", icon = icon("bookmark"))
+                                
                               ),
                               
                               mainPanel(width = 9,

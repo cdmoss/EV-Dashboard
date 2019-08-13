@@ -1,0 +1,33 @@
+Tasks
+
+- Finish powerpoint
+
+- Finish all I can with app
+
+	- send out driver feedback email	done
+		- possible changes to questions:
+			- ev in next 5 years: change to ev for your next car
+		- responses recieved:
+			- alex
+			- morgan
+
+	- get maintenance info
+
+	- find info/sources for level 1 and level 3 chargers
+
+	- format text in faq
+		- drive modes
+		- how fast is egolf
+		- italicize sources
+
+	- format pictures
+		- create media queries
+
+	- add trendline description	
+
+- Get feedback from tracy
+
+	- ask about what her "use" is to determine quality
+	
+- Talk to rose about embedding app in website
+
