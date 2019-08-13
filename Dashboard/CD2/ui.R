@@ -50,15 +50,26 @@ shinyUI(
                   <b>E-Golf</b> Data Explorer"), 
                  windowTitle = "EVDB"),
       
+      #tags$img()
+      
+      #withTags({
+        #div(class="header",
+          #p("Welcome to the Medicine Hat College Electric Vehicle Dashboard! Last November,
+           # MHC partnered with Southland Volkswagen in order to learn about electric vehicles.")
+          #img()
+        #)
+      #})
+      
       tabsetPanel(
         tabPanel("Common Questions",
                  icon = icon("book-reader"),
-                 tags$iframe(src = 'FAQ.html', 
+                 tags$iframe(src = 'FAQ2.html', 
                              width = '100%', height = '800px', 
                              frameborder = 0, scrolling = 'auto')
         ),
         tabPanel("Explore",
                  icon = icon("binoculars"),
+                 
                  sidebarLayout(
                               sidebarPanel(
                                 width = 3,

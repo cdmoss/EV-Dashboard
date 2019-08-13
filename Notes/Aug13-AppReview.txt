@@ -1,0 +1,37 @@
+App Review:
+
+- Questions for Tracy:
+	- Any uses for app beyond being presented on our website?
+	- line of best fit description?
+	- FAQ answer wording?
+	- Aesthetic changes recommendations
+
+- Things left to do:
+	- format pictures
+	- format picture captions
+	- format text color
+	- add maintenance 
+	- add cost of ownership (need maintenance)
+	- italicize sources
+
+- Known issues:
+	- Grammar error "how likely are you to buy an ev?"
+	- energy recoup, storwd to stored
+	- cost of charge extra wording
+	- charging cord picture caption way too long
+	- charging stations answer out of order
+		- remove exxtra whitespace
+	- FAQ is centered on page, should be aligned to left of page
+	- responsive scrollbar on long monitor
+	- make charger plug pictures consistent size 9smaller)
+	- bold drive mode names
+	- extra driver 6
+	- extra group in climate control
+
+- Feedback:
+	- how much does it cost to charge: 
+	- incentive: add date
+	- charging length: for this project, we collected level 2 charg only (make it intentional)
+	- be more specific with context for temperature v range question
+	- clean data
+	- create landing page to give people context

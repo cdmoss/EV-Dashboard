@@ -5,6 +5,11 @@ output:
 ---
 
 <style type="text/css">
+
+  a {
+    color: #2196F3;
+  }
+
   .charge-plugs {
     float: left;
     width: 40%;
@@ -26,7 +31,7 @@ output:
   }
   
   #home-charger {
-    width: 60%;
+    width: 50%;
     margin: 20px 20px 0px 0px;
     background-color: ;
     border: 1px solid #C0C0C0;
@@ -84,7 +89,7 @@ The MSRP of a 2019 Volkswagen E-golf is $43,020, plus the following fees and tax
 
 <br>
 
-Source: Southland Volkswagen
+<em>Source: Southland Volkswagen</em>
 
 ##### How much does it cost to charge the e-golf?
 
@@ -94,7 +99,7 @@ Public charging stations are often free, but some charge a flat rate or cost per
 
 <br>
 
-Source: Surveyed Medicine Hat residents for their utility rates.
+<em>Source: Surveyed Medicine Hat residents for their utility rates.</em>
 
 ##### What maintenance do electric vehicles require?
 
@@ -116,8 +121,8 @@ The warranty for the e-golf is as follows:
 
 <br>
 
-Source: Canada Warranty and Maintenance booklet
-(For more information contact Southland Volkswagen)
+<em>Source: Canada Warranty and Maintenance booklet
+(For more information contact Southland Volkswagen)</em>
 
 ##### What type of incentives come with owning an electric vehicle?
 
@@ -130,9 +135,11 @@ As per the iZEV program, the Canadian Federal Government will award rebates for 
 
 <br>
 
-Source: https://www.tc.gc.ca/en/services/road/innovative-technologies/zero-emission-vehicles.html
+add date
 
-([list of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html)).
+<em>Source: https://www.tc.gc.ca/en/services/road/innovative-technologies/zero-emission-vehicles.html
+
+[List of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html).</em>
 
 #### Charging {.tabset .tabset-fade .tabset-dropdown}
 
@@ -150,7 +157,7 @@ high = b %>% pull(maxChargeRate) %>% signif(2)
 avg = b %>% pull(averageChargeRate) %>% signif(2)
 ```
 
-There are 3 levels of charger. We were only able to collect data for a level 2 charge:
+There are 3 levels of charger. The scope of this project only included data collection for a level 2 charger:
 
 - <strong>Level 1 (110V):</strong> A full charge takes 8 - 20 hours 
 
@@ -211,7 +218,7 @@ The E-golf supports both SAE J1772 (J Plug) as well as CCS charger types, which 
 
 <br>
 
-Source: https://pulse.vwmodels.ca/2017/06/electric-vehicle-charging-101/
+<em>Source: https://pulse.vwmodels.ca/2017/06/electric-vehicle-charging-101/</em>
 
 <div class="charge-plugs">
 <figure>
@@ -264,7 +271,7 @@ df %>%
 
 <br>
 
-Source: Data collected by MHC
+<em>Source: Data collected by MHC</em>
 
 ##### What is energy recuperation?
 
@@ -272,21 +279,21 @@ When the vehicle is braked, and when the vehicle is coasting, electrical energy 
 
 <br>
 
-Source: Owners Manual
+<em>Source: Owners Manual</em>
 
 ##### How fast is the e-golf?
 
 Relevant specs of the e-golf are as follows:
 
-Top speed: 150 km/h.
+<strong>Top speed:</strong> 150 km/h.
 
-Time to accelerate from 0 - 100 km/h: 9.6 seconds
+<strong>Time to accelerate from 0 - 100 km/h:</strong> 9.6 seconds
 
-Instantaneous torque: 214 lb-ft (270 Nm)
+<strong>Instantaneous torque:</strong> 214 lb-ft (270 Nm)
 
 <br>
 
-Source: https://ev-database.org/car/1087/Volkswagen-e-Golf
+<em>Source: https://ev-database.org/car/1087/Volkswagen-e-Golf</em>
 
 ##### What are the drive modes?
 
@@ -300,9 +307,9 @@ The drive modes change the way the e-golf consumes power:
 
 <br>
 
-Source: Owners Manual
+<em>Source: Owners Manual</em>
 
-1. Climatronic refers to the vehicle's automatic climate control function, which allows the internal temperature to be set at a certain degree value.
+<em>1. Climatronic refers to the vehicle's automatic climate control function, which allows the internal temperature to be set at a certain degree value.</em>
 
 ##### How does temperature affect the range of the e-golf?
 
@@ -322,7 +329,7 @@ According to our data (shown above), the predicted range of the e-golf increases
 
 <br>
 
-Source: Data collected by MHC
+<em>Source: Data collected by MHC</em>
 
 ##### What is blue score and the Think Blue Trainer?
 
@@ -330,7 +337,7 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 
 <br>
 
-Source: Owners Manual
+<em>Source: Owners Manual</em>
 
 #### Driver Feedback {.tabset .tabset-fade .tabset-dropdown}
 

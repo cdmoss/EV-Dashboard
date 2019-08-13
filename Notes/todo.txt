@@ -1,33 +1,22 @@
-Tasks
+To Do:
 
-- Finish powerpoint
+App:
+- Format pictures
+	- create media querys for pictures
+	- add borders
+	- shorten caption
 
-- Finish all I can with app
+- Format Text
+	- italicize sources
+	- bold eco modes and brake modes
 
-	- send out driver feedback email	done
-		- possible changes to questions:
-			- ev in next 5 years: change to ev for your next car
-		- responses recieved:
-			- alex
-			- morgan
+- Add missing content:
+	- Add top banner with context
 
-	- get maintenance info
+Presentation:
 
-	- find info/sources for level 1 and level 3 chargers
 
-	- format text in faq
-		- drive modes
-		- how fast is egolf
-		- italicize sources
 
-	- format pictures
-		- create media queries
 
-	- add trendline description	
-
-- Get feedback from tracy
-
-	- ask about what her "use" is to determine quality
-	
-- Talk to rose about embedding app in website
-
+Aug 14
+	- add border and shadow to temp data
