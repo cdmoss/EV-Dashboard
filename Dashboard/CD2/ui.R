@@ -12,6 +12,9 @@ shinyUI(
       useShinyjs(),
       theme = shinytheme("paper"),
       
+      tags$head(includeHTML("analytics.html")),
+      
+      
       tags$style(".selectize-input.focus {
              border-color: #2196f3;
              border-width: 1.5px;
