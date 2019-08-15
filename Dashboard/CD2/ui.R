@@ -12,6 +12,7 @@ shinyUI(
       useShinyjs(),
       theme = shinytheme("paper"),
       
+<<<<<<< HEAD
       tags$style("#mainChart {
                  margin-bottom: 50px;
                  "),
@@ -57,6 +58,10 @@ shinyUI(
       tags$style(".main-container {
                  box-shadow: 1px 1px 6px 2px #D8D8D8 inset;
                 }"),
+=======
+      tags$head(includeHTML("analytics.html")),
+      
+>>>>>>> a837066ef41663b18ac861f6cfb039710e76edfa
       
       tags$style(".selectize-input.focus {
              border-color: #2196f3;
