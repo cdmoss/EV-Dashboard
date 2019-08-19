@@ -12,7 +12,6 @@ shinyUI(
       useShinyjs(),
       theme = shinytheme("paper"),
       
-<<<<<<< HEAD
       tags$style("#mainChart {
                  margin-bottom: 50px;
                  "),
@@ -32,7 +31,7 @@ shinyUI(
                   background-color: white;
                   float:left;
                   width: 100%;
-                  box-shadow: 0px 5px 6px -1px #D8D8D8;
+                  box-shadow: 1px 1px 3px 1px #D8D8D8;
                   border-top: 1px;
                   border-radius: 3px;
                   margin: 10px 0px;
@@ -56,12 +55,10 @@ shinyUI(
                  }"),
       
       tags$style(".main-container {
-                 box-shadow: 1px 1px 6px 2px #D8D8D8 inset;
+                 box-shadow: 1px 1px 6px 2px #D8D8D8;
                 }"),
-=======
-      tags$head(includeHTML("analytics.html")),
       
->>>>>>> a837066ef41663b18ac861f6cfb039710e76edfa
+      tags$head(includeHTML("analytics.html")),
       
       tags$style(".selectize-input.focus {
              border-color: #2196f3;
@@ -138,8 +135,8 @@ shinyUI(
       tabsetPanel(
         tabPanel("Common Questions",
                  icon = icon("book-reader"),
-                 tags$iframe(src = 'FAQ11.html', 
-                             width = '100%', height = '800px', 
+                 tags$iframe(src = 'FAQ15.html', 
+                             width = '100%', height = '1400px', 
                              frameborder = 0, scrolling = 'auto')
         ),
         tabPanel("Explore",

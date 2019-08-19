@@ -60,9 +60,8 @@ output:
 
   .main-container {
     max-width: 100% !important;
-    margin-left: 0px;
-    margin-right: 0px;
-    box-shadow: 1px 1px 6px 2px #D8D8D8 inset;
+    margin: 0px 2px;
+    box-shadow: 1px 1px 6px 2px #D8D8D8;
   }
   
   .header-image {
@@ -84,8 +83,6 @@ output:
   
 </style>
 
-
-
 ```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
 library(knitr)
@@ -103,8 +100,6 @@ chargetimes = read_csv("flo_charge.csv")
 <img class="header-image" src="pictures/charging.jpg" alt="piggy-bank" />
 
 ##### How long does it take to charge on average?
-
-<br>
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
 b = chargetimes %>% 
@@ -220,8 +215,6 @@ The E-golf supports both SAE J1772 (J Plug) as well as CCS charger types, which 
 
 ##### How much does an e-golf cost?
 
-<br>
-
 The MSRP of a 2019 Volkswagen E-golf is $43,020, plus the following fees and taxes:
 
 - Federal Air Conditioning - $100.00
@@ -230,32 +223,26 @@ The MSRP of a 2019 Volkswagen E-golf is $43,020, plus the following fees and tax
 - Administration fee: $599
 
 <br>
-
+ 
 <em>Source: Southland Volkswagen</em>
 
 ##### How much does it cost to charge the e-golf?
-
-<br>
 
 Using a rate of 12.8 cents/kWh and a battery capacity of 35.8kWh, it costs \$4.58 for a full charge.
 
 Public charging stations are often free, but some charge a flat rate or cost per kWh that is comparable to the cost of charging at home.
 
-<br>
-
 <em>Source for utility rate: Surveyed Medicine Hat residents for their utility rates.
+
+<br>
 
 Source for battery capacity: https://ev-database.org/car/1087/Volkswagen-e-Golf</em>
 
 ##### What maintenance do electric vehicles require?
 
-<br>
-
 Electric vehicles don't require oil changes, fuel filter replacements, spark plug replacements or emission checks, but still will require regular maintenance of the brakes, tires, coolant and of course the battery.
 
 ##### What type of warranty does the e-golf have?
-
-<br>
 
 The warranty for the e-golf is as follows:
 
@@ -272,8 +259,6 @@ The warranty for the e-golf is as follows:
 
 ##### What type of Government incentives come with owning an electric vehicle?
 
-<br>
-
 As per the iZEV program, the Canadian Federal Government will award rebates for the following amounts (pertaining to the 2019 VW E-golf):
 
  - \$5,000 for full purchase 
@@ -288,8 +273,6 @@ As per the iZEV program, the Canadian Federal Government will award rebates for 
 [List of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html).</em>
 
 ##### How much does the e-golf cost to drive ($/km)?
-
-<br>
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
@@ -313,8 +296,6 @@ when taking into account up front cost, fuel, maintenance (tires, all fluids),
 
 ##### What is the averge range of the vehicle?
 
-<br>
-
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 df %>% 
   group_by('Temperature' = cut(start_outside_temp, 5)) %>% 
@@ -334,17 +315,11 @@ df %>%
 
 ##### What is energy recuperation?
 
-<br>
-
 When the vehicle is braked, and when the vehicle is coasting, electrical energy is generated via the electric motor and stored in the high-voltage battery. This feature is called brake energy recuperation.
-
-<br>
 
 <em>Source: Owners Manual</em>
 
 ##### How fast is the e-golf?
-
-<br>
 
 Relevant specs of the e-golf are as follows:
 
@@ -359,8 +334,6 @@ Relevant specs of the e-golf are as follows:
 <em>Source: https://ev-database.org/car/1087/Volkswagen-e-Golf</em>
 
 ##### What are the drive modes?
-
-<br>
 
 The drive modes change the way the e-golf consumes power:
 
@@ -377,8 +350,6 @@ The drive modes change the way the e-golf consumes power:
 <em>1. Climatronic refers to the vehicle's automatic climate control function, which allows the internal temperature to be set at a certain degree value.</em>
 
 ##### How does temperature affect the range of the e-golf?
-
-<br>
 
 According to our data (shown above), the predicted range of the e-golf increases as temperature increases.
 
@@ -401,9 +372,8 @@ df %>%
 
 ##### What is blue score and the Think Blue Trainer?
 
-<br>
-
-The Think Blue trainer analyzes your driving and utilizes a visual display to help you adopt a more energy efficient driving style. Blue score is the metric used to rate your driving style efficiency.
+The Think Blue trainer analyzes your driving and utilizes a visual display to help you adopt a more energy efficient driving style. Blue score is the metric used to rate your driving style 
+efficiency.
 
 <br>
 
@@ -414,8 +384,6 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 <img class="header-image" src="pictures/feedback.jpg" alt="piggy-bank" />
 
 ##### How does the car feel to drive?
-
-<br>
 
 <Strong>Driver 1: </strong>The car is very nice with all available torque at take-off. I loved the departure feature in the winter, getting into a warm and defrosted car ready to go while plugged in was great. The car handled great with all of the weight so close to the ground and evenly distributed, The heating and air conditioning was very quick and kept the cabin feeling great. I really enjoyed the experience of driving the car.
 
@@ -429,8 +397,6 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 
 ##### Did you feel the car was convenient to drive? Why or why not?
 
-<br>
-
 <strong>Driver 1: </strong> Yes, it was very convenient to drive, the actual driving of the car varied greatly because the amount you have to brake can be greatly reduced by the state of battery and how much regeneration you have selected.
 
 <strong>Driver 2:</strong> The only challenge was the data gathering, the car itself 
@@ -443,8 +409,6 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 
 ##### Was the infotainment system intuitive to use? Why or why not?
 
-<br>
-
 <Strong>Driver 1:</strong>Yes, it was easy to use and collect valid data off of.
 
 <strong>Driver 2:</strong> I only used it for the necessary data gathering so my opinion may be vague, but it seemed ok!
@@ -455,9 +419,7 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 
 <strong>Driver 7:</strong> Sure, my car doesnt have anything like it to compare to - but I was able to connect my phone and make calls/listen to music without an issue.
 
-##### How likely are you to buy an electric vehicle in the near future?
-
-<br>
+##### How likely are you to buy an electric vehicle in the next 5 years?
 
 <strong>Driver 1:</strong> I most likely will not be purchasing an electric vehicle in the next five years because I just updated and they last me longer than that. I am however looking forward to the next upgrade, it will most likely be electric or have an electrified component to it (PHEV).
 
@@ -471,8 +433,6 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 
 ##### What was your favorite part about driving the car?
 
-<br>
-
 <strong>Driver 1:</strong> I never had to worry about it running out of fuel with the trips I was taking when it was fully charged in the morning.
 
 <strong>Driver 2:</strong> Inexpensive and quiet.
@@ -482,5 +442,3 @@ The Think Blue trainer analyzes your driving and utilizes a visual display to he
 <strong>Driver 6:</strong> Flooring it, for sure!
 
 <strong>Driver 7:</strong> Taking my dad for a drive and showing him how quiet it is!
-
-</div>
