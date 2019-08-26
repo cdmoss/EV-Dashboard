@@ -297,7 +297,7 @@ As per the iZEV program, the Canadian Federal Government will award rebates for 
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
-x = 41.55/655
+x = .128
 
 val = df %>% 
   mutate(cost = economy * x,
@@ -320,22 +320,21 @@ when taking into account up front cost, fuel, maintenance (tires, all fluids),
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 df %>% 
   group_by('Temperature' = cut(start_outside_temp, 5)) %>% 
-  summarise(`Range indicated at full charge (km)` = max(range_start, na.rm = T) %>% round(0)) %>% 
+  summarise(`Range indicated at full charge (km)` = max(range_start, na.rm = T) %>% round(0),
+            'Count' = n()) %>% 
   drop_na %>%
   mutate('Temperature' = Temperature %>% 
            str_remove("\\(") %>% 
            str_remove("\\]") %>% 
            str_replace("\\,", " to ")) %>% 
-           rename(
-             'Temperature (degrees C)' = 'Temperature'
-           ) %>% 
+           rename('Temperature (degrees C)' = 'Temperature') %>% 
   kable(table.attr='class="range-table"') %>% 
     kable_styling()
 ```
 
 <br>
 
-<em>Source: Data collected by MHC</em>
+<em>Source: Data collected by MHC/industry lectric vehicle project team</em>
 
 ##### What is energy recuperation?
 
@@ -404,19 +403,26 @@ According to our data (shown above), the predicted range of the e-golf increases
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
+labeller = function(variable, value){
+  return()
+}
+
 df %>% 
+  select(start_outside_temp, range_start, climate_control) %>% 
+  na.omit() %>% 
   ggplot(aes(x = start_outside_temp, y = range_start)) + 
+  labs(x = "Temperature", y = "Range") +
   geom_point(alpha = 0.15) + 
   geom_smooth(method = "lm", se = F) + 
-  theme_minimal() + 
-  theme(panel.grid = element_blank()) + 
-  labs(x = "Temperature", y = "Range")
+  theme(panel.grid = element_blank()) +
+  facet_wrap(~ climate_control)
+  
 
 ```
 
 <br>
 
-<em>Source: Data collected by MHC</em>
+<em>Source: Data collected by MHC/industry electric vehicle project team</em>
 
 ##### What is blue score and the Think Blue Trainer?
 
@@ -442,60 +448,81 @@ The main screen of the Think Blue Trainer displays a circle that fills with blue
 
 ##### How does the car feel to drive?
 
-<Strong>Driver 1: </strong>The car is very nice with all available torque at take-off. I loved the departure feature in the winter, getting into a warm and defrosted car ready to go while plugged in was great. The car handled great with all of the weight so close to the ground and evenly distributed, The heating and air conditioning was very quick and kept the cabin feeling great. I really enjoyed the experience of driving the car.
+<strong>Driver A:</strong> It was "zippy". It had great horsepower.
 
-<strong>Driver 2:</strong> Smooth, quiet, fast, and fun!
+<strong>Driver B: </strong>The car is very nice with all available torque at take-off. I loved the departure feature in the winter, getting into a warm and defrosted car ready to go while plugged in was great. The car handled great with all of the weight so close to the ground and evenly distributed, The heating and air conditioning was very quick and kept the cabin feeling great. I really enjoyed the experience of driving the car.
 
-<strong>Driver 3:</strong> So quiet, and so smooth to drive! I loved it.
+<strong>Driver C:</strong> Great, accelerates fast and all of the featyres make the car a great experience: Lane assist, backup cam, cruise control, departure, etc.
 
-<strong>Driver 6:</strong> Good, was smooth and felt clean and less bulky than my gas vehicle. There were a few times when it didn't start fully which were confusing, but otherwise it was awesome.
+<strong>Driver D:</strong> Good, was smooth and felt clean and less bulky than my gas vehicle. There were a few times when it didn't start fully which were confusing, but otherwise it was awesome.
 
-<strong>Driver 7:</strong> It was super fun to drive, it felt like a go-kart. Plenty of acceleration, good handling, stable on the highway. It was easier to drive than my car, just push the pedal and zoom zoom! All the little features like lane assist and auto-park were neat, but not much more than a gimmick in my experience.
+<strong>Driver E:</strong> So quiet, and so smooth to drive! I loved it.
+
+<strong>Driver F:</strong> It was super fun to drive, it felt like a go-kart. Plenty of acceleration, good handling, stable on the highway. It was easier to drive than my car, just push the pedal and zoom zoom! All the little features like lane assist and auto-park were neat, but not much more than a gimmick in my experience.
+
+<strong>Driver G:</strong> Smooth, quiet, fast, and fun!
 
 ##### Did you feel the car was convenient to drive? Why or why not?
 
-<strong>Driver 1: </strong> Yes, it was very convenient to drive, the actual driving of the car varied greatly because the amount you have to brake can be greatly reduced by the state of battery and how much regeneration you have selected.
+<strong>Driver A:</strong> The only challenge was the data gathering, the car itself 
 
-<strong>Driver 2:</strong> The only challenge was the data gathering, the car itself 
+<strong>Driver B:</strong> Around town and short distances the car was great. The inconvenience comes when you want to travel more than 200km. With the current battery you need to stop often, and for a significant duration (around 1 hour).
 
-<strong>Driver 3:</strong> Yes, although data collection was a bit of work :P.
+<strong>Driver C: </strong> Yes, it was very convenient to drive, the actual driving of the car varied greatly because the amount you have to brake can be greatly reduced by the state of battery and how much regeneration you have selected.
 
-<strong>Driver 6:</strong> Yes, it did everything I needed it to do.
+<strong>Driver D:</strong> Very inconvenient, but I have a toddler -  so I had to install the car seat and be yelled at for "snacks" while collecting data.
 
-<strong>Driver 7:</strong> Charging was interesting - I found that once I started charging it nightly, like my phone, I stopped worrying about range anxiety.
+<strong>Driver E:</strong> Yes, although data collection was a bit of work :P.
+
+<strong>Driver F:</strong> Charging was interesting - I found that once I started charging it nightly, like my phone, I stopped worrying about range anxiety.
+
+<strong>Driver G:</strong> Yes, it did everything I needed it to do.
 
 ##### Was the infotainment system intuitive to use? Why or why not?
 
-<Strong>Driver 1:</strong>Yes, it was easy to use and collect valid data off of.
+<strong>Driver A</strong> Relatively easy to use, the "Blue Score" should have been programmed to show up on the driving data screen.
 
-<strong>Driver 2:</strong> I only used it for the necessary data gathering so my opinion may be vague, but it seemed ok!
+<strong>Driver B:</strong> Mostly yes, a couple things required searching for but it was overall easy to use.
 
-<strong>Driver 3:</strong> Mostly yes, a couple things required searching for but it was overall easy to use.
+<strong>Driver C:</strong> Sure, my car doesnt have anything like it to compare to - but I was able to connect my phone and make calls/listen to music without an issue.
 
-<strong>Driver 6:</strong> For the most part. Sometimes if I accidentally went to the main screen it took me awhile to get back to the data screen. There are a lot of options on the main screen which are cumbersome to figure out if your attention is divided.
+<Strong>Driver D:</strong>Yes, it was easy to use and collect valid data off of.
 
-<strong>Driver 7:</strong> Sure, my car doesnt have anything like it to compare to - but I was able to connect my phone and make calls/listen to music without an issue.
+<strong>Driver E:</strong> Yes it was alright.
+
+<strong>Driver F:</strong> For the most part. Sometimes if I accidentally went to the main screen it took me awhile to get back to the data screen. There are a lot of options on the main screen which are cumbersome to figure out if your attention is divided.
+
+<strong>Driver G:</strong> I only used for the necssary data so my opinion is vague. Seems ok!
 
 ##### How likely are you to buy an electric vehicle in the next 5 years?
 
-<strong>Driver 1:</strong> I most likely will not be purchasing an electric vehicle in the next five years because I just updated and they last me longer than that. I am however looking forward to the next upgrade, it will most likely be electric or have an electrified component to it (PHEV).
+<strong>Driver A:</strong> Pretty unlikely, simply because my car still has a lot of miles left to go on it. When the time comes to buy something, I'll definitely look at whats available. 
 
-<strong>Driver 2:</strong>I would for sure. In that time we'll have longer range and more charging options.
+<strong>Driver B:</strong> Extremely likely. It would save tons of money on gas! Even brand new, the price is similar to other gas models. For example, a brand new Ford Flex is also around $50,000.
 
-<strong>Driver 3:</strong> Extremely likely. It would save tons of money on gas! Even brand new, the price is similar to other gas models. For example, a brand new Ford Flex is also around $50,000.
+<strong>Driver C:</strong> 5% likely. Until battery technology or charging technology improves I will look for a vehicle that can travel long distances without the need to constantly stop and spend an hour or more at the refueling station. If more people start purchasing electric vehicles, congestion at the charge stations will be very inconvenient.
 
-<strong>Driver 6:</strong> I'd like to, but need the range to increase a lot before it would work well for my lifestyle. I also need to do more research (or have it made readily available by VW?) on the batteries - warranty, lifespan, how environmentally damaging this battery is compared to conventional batteries in terms of mining, disposal etc. I just don't know enough yet.
+<strong>Driver D:</strong>I would for sure. In that time we'll have longer range and more charging options.
 
-<strong>Driver 7:</strong> Pretty unlikely, simply because my car still has a lot of miles left to go on it. When the time comes to buy something, I'll definitely look at whats available. 
+<strong>Driver E:</strong> I most likely will not be purchasing an electric vehicle in the next five years because I just updated and they last me longer than that. I am however looking forward to the next upgrade, it will most likely be electric or have an electrified component to it (PHEV).
+
+<strong>Driver F:</strong> Likely, it seems intuitive.
+
+<strong>Driver G:</strong> I'd like to, but need the range to increase a lot before it would work well for my lifestyle. I also need to do more research (or have it made readily available by VW?) on the batteries - warranty, lifespan, how environmentally damaging this battery is compared to conventional batteries in terms of mining, disposal etc. I just don't know enough yet.
+
 
 ##### What was your favorite part about driving the car?
 
-<strong>Driver 1:</strong> I never had to worry about it running out of fuel with the trips I was taking when it was fully charged in the morning.
+<strong>Driver A:</strong> Flooring it, for sure!
 
-<strong>Driver 2:</strong> Inexpensive and quiet.
+<strong>Driver B:</strong> Cheap travel cost, electricity recuperation via engine brakes, car features, and (what seemed like) very low maintenance.
 
-<strong>Driver 3:</strong> It's really fast! Almost got a few speeding tickets.. :P
+<strong>Driver C:</strong> I never had to worry about it running out of fuel with the trips I was taking when it was fully charged in the morning.
 
-<strong>Driver 6:</strong> Flooring it, for sure!
+<strong>Driver D:</strong> Seemingly unlimited horsepower!
 
-<strong>Driver 7:</strong> Taking my dad for a drive and showing him how quiet it is!
+<strong>Driver E:</strong> It's really fast! Almost got a few speeding tickets.. :P
+
+<strong>Driver F:</strong> Taking my dad for a drive and showing him how quiet it is!
+
+<strong>Driver G:</strong> Inexpensive and quiet.

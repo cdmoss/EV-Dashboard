@@ -192,11 +192,11 @@ shinyUI(
                                 tags$div(id="quick-tips",
                                          tags$h6("Quick Tips:"),
                                          tags$p("1. A strong relationship will cause a blue line
-                                                of best fit to display"),
-                                         tags$p("2. Hide/show groups by clicking the group names in the legend"),
+                                                of best fit to display."),
+                                         tags$p("2. Hide/show groups by clicking the group names in the legend."),
                                          tags$p("3. Use the mouse to select an area to be zoomed,
-                                                double click the chart to zoom back out"),
-                                         tags$p("Check the help tab for more information about using the tool")
+                                                double click the chart to zoom back out."),
+                                         tags$p("Check the help tab for more information about using the tool.")
                                 )
                                 
                                 

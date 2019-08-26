@@ -16,7 +16,7 @@ App Review:
 
 - Known issues:
 	- Grammar error "how likely are you to buy an ev?"
-	- energy recoup, storwd to stored
+	- energy recoup, stored
 	- cost of charge extra wording
 	- charging cord picture caption way too long
 	- charging stations answer out of order
