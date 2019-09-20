@@ -261,7 +261,7 @@ Source for battery capacity: https://ev-database.org/car/1087/Volkswagen-e-Golf<
 
 ##### What maintenance do electric vehicles require?
 
-Electric vehicles don't require oil changes, fuel filter replacements, spark plug replacements or emission checks, but still will require regular maintenance of the brakes, tires, coolant and of course the battery.
+Electric vehicles don't require oil changes, fuel filter replacements, spark plug replacements or emission checks, but still will require regular maintenance of the brakes, tires, coolant and of course the battery. See your local VW dealer for more detailed information on 
 
 ##### What type of warranty does the e-golf have?
 
@@ -293,7 +293,7 @@ As per the iZEV program, the Canadian Federal Government will award rebates for 
 
 [List of vehicles eligible for the iZEV program](https://www.tc.gc.ca/en/services/road/innovative-technologies/list-eligible-vehicles-under-izev-program.html).</em>
 
-##### How much does the e-golf cost to drive ($/km)?
+##### How much does the e-golf cost to drive (charging cost/km)?
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
@@ -307,9 +307,11 @@ val = df %>%
 ```
 From our data, the average cost per km is `r val`.
 
-(from a pure fuel persceptive)
+##### What is the cost of ownership for an e-golf (over 6 years)?
 
-when taking into account up front cost, fuel, maintenance (tires, all fluids),  
+The total upfront cost of an e-golf is \$43,745.25 or \$7290.88/yr, and assuming it is driven 15000 km/yr and using a value of 0.02$/km (as per our data), the cost to charge is \$300/yr. This brings the cost to drive the E-golf per year **\$7590.88.**
+
+<em>Source: Data collected by MHC/industry lectric vehicle project team. See your local VW dealer for information on yearly maintenance costs as these may vary by region</em>
 
 #### Driving {.tabset .tabset-fade .tabset-dropdown}
 
@@ -441,6 +443,8 @@ The main screen of the Think Blue Trainer displays a circle that fills with blue
 <img src="pictures/blue.jpg" alt="Think Blue Trainer"/>
 <figcaption><em>A sample Blue Trainer session. Some segments show a very high blue score, others not so much. <em>Photo Source: https://www.guideautoweb.com/en/galleries/42356/2017-volkswagen-e-golf-watch-out-bolt/?im=25
 </div>
+
+
 
 #### Driver Feedback {.tabset .tabset-fade .tabset-dropdown}
 
